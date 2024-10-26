@@ -15,7 +15,7 @@ const kafka = new Kafka({
 const producer = kafka.producer();
 producer.connect();
 
-app.post('/upload', upload.single('file'), async (req, res) => {
+app.post('/convert', upload.single('file'), async (req, res) => {
   const filePath = req.file.path;
 
   try {
